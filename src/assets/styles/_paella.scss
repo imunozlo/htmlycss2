@@ -1,0 +1,122 @@
+@use "sass:color" as c;
+
+.dish {
+  margin: $spacing-base 0;
+
+  &__title {
+    font-size: px-to-rem(28);
+    color: $color-primary;
+    margin-bottom: $spacing-base;
+  }
+
+  &__subtitle {
+    font-size: px-to-rem(22);
+    margin-top: $spacing-base;
+    margin-bottom: 0.5rem;
+    color: c.adjust($color-primary, $lightness: -10%);
+  }
+
+  &__history {
+    font-size: px-to-rem(16);
+    line-height: 1.5;
+    margin-bottom: $spacing-base;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $spacing-base;
+
+    img {
+      width: 100%;
+      max-width: 600px; // Limita el tamaño máximo de la imagen
+      height: auto;
+      border: 2px solid $color-primary;
+      border-radius: 8px;
+      display: block;
+    }
+  }
+
+  &__description {
+    font-size: px-to-rem(16);
+    margin-bottom: $spacing-base;
+    line-height: 1.5;
+  }
+
+  &__ingredients {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+    padding: 0;
+    margin: 1rem 0;
+    list-style: none;
+
+    &-item {
+      background: c.adjust($color-primary, $lightness: 40%);
+      color: $color-primary;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: 500;
+      box-shadow: 0 2px 4px #{c.change($color-primary, $alpha: 0.2)};
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-bottom: 1px solid c.adjust($color-primary, $lightness: 20%);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px #{c.change($color-primary, $alpha: 0.3)};
+      }
+    }
+  }
+
+  @include respond-to(mobile) {
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* Sección de ingredientes */
+.ingredients {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgb(240 253 244), rgb(220 252 231));
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  &__title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #065f46;
+    font-weight: 600;
+  }
+
+  &__select {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #10b981;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgb(220 252 231), rgb(240 253 244));
+    color: #065f46;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: #065f46;
+      box-shadow: 0 0 10px rgb(16 185 129 / 0.3);
+    }
+  }
+
+  &__info {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #065f46;
+  }
+}

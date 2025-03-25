@@ -1,27 +1,96 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paella de Castellón | PAC</title>
+    <link rel="stylesheet" href="./assets/styles/main.scss" />
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title"><i class="fas fa-university"></i>Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+    <header class="header">
+      <div class="header__container">
+        <img
+          class="header__logo"
+          src="./assets/images/logo.png"
+          alt="Universitat Oberta de Catalunya"
+        />
+        <h1 class="header__title">
+          <i class="fas fa-utensils"></i>
+          Paella de Castellón
+        </h1>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="dish">
+        <h2 class="dish__title">Paella de Castellón</h2>
+
+        <div class="dish__image">
+          <img src="./assets/images/paella.jpg" alt="Paella de Castellón" />
+        </div>
+
+        <p class="dish__description">
+          La paella es uno de los platos más representativos de la gastronomía de
+          la Comunidad Valenciana. En Castellón, se elabora con ingredientes
+          frescos y de proximidad, destacando el uso de verduras, pollo y conejo.
+        </p>
+
+        <ul class="dish__ingredients">
+          <li class="dish__ingredients-item">Arroz bomba</li>
+          <li class="dish__ingredients-item">Pollo y conejo</li>
+          <li class="dish__ingredients-item">Judías verdes y garrofón</li>
+          <li class="dish__ingredients-item">Aceite de oliva</li>
+          <li class="dish__ingredients-item">Azafrán y sal</li>
+        </ul>
+
+        <h3 class="dish__subtitle">Historia y Origen</h3>
+        <p class="dish__history">
+          Se dice que la paella se originó en las zonas rurales de la Albufera de
+          Valencia, donde los campesinos cocinaban arroz con los ingredientes que
+          tenían a mano: conejo, pollo y verduras frescas. Con el tiempo, esta
+          receta fue evolucionando y adquiriendo diferentes variantes según la
+          comarca. En Castellón, por la proximidad a la costa y a la montaña, se
+          aprovechan tanto productos del mar como de la huerta y la ganadería.
+        </p>
+
+        <h3 class="dish__subtitle">Por qué se cocina así</h3>
+        <p class="dish__history">
+          La clave de la paella radica en el sofrito inicial, el uso de un buen
+          caldo casero y la proporción exacta de arroz. En Castellón se mantiene
+          la tradición de usar leña de naranjo para cocinarla, aportando un
+          aroma distintivo al plato. Además, la variedad de verduras de la zona
+          añade un toque fresco y lleno de sabor que la diferencia de otras
+          versiones.
+        </p>
+      </section>
+
+      <section class="ingredients">
+        <h3 class="ingredients__title">
+          Selecciona un ingrediente y descubre si su uso es común o no:
+        </h3>
+        <select id="ingredient-select" class="ingredients__select">
+          <option value="">-- Elige un ingrediente --</option>
+          <option value="romero">Romero</option>
+          <option value="caracoles">Caracoles</option>
+          <option value="guisantes">Guisantes</option>
+          <option value="chorizo">Chorizo</option>
+          <option value="maiz">Maíz</option>
+          <option value="tirabeques">Tirabeques</option>
+          <option value="pato">Pato</option>
+          <option value="niscalos">Níscalos</option>
+          <option value="pimiento">Pimiento</option>
+        </select>
+        <div id="ingredient-info" class="ingredients__info"></div>
+      </section>
+
+
+    </main>
+
     <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+
+    <!-- Script principal -->
+    <script type="module" src="./assets/scripts/main.js"></script>
   </body>
+
+
 </html>

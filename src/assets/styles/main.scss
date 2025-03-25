@@ -6,8 +6,12 @@
 /**
  * Import variables
  */
-
-@import "variables";
+ @import "variables";
+ @import "functions";
+ @import "mixins";
+ @import "layouts/layout";
+ @import "layouts/home";
+ @import "paella";
 
 /**
  * Import npm dependencies
@@ -23,8 +27,9 @@
  * It's a best practice to use a different partial for each page
  */
 
-@import "layouts/home";
+
 
 /**
  * Do NOT include anything else in this file!
  */
+

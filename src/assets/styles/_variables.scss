@@ -6,7 +6,19 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
 $uoc-corporate: #367800;
-$uoc-masterbrand: #ff73f8;
+$uoc-masterbrand: #ffffff;
 $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 
-$mqMinWidth: 420px;
+$mq-min-width: 420px; // Renombrado para cumplir con el patrón esperado
+
+// Variables de color
+$color-primary: #002f5e;
+$color-secondary: #f9a825;
+$color-background: #f5f5f5;
+$color-text: #333;
+
+// Tipografía
+$font-family-base: "Arial", sans-serif;
+
+// Otras variables
+$spacing-base: 1rem;
